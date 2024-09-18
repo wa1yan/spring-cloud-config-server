@@ -3,12 +3,6 @@ server:
 spring:
   application:
     name: config-server
-  security:
-    basic:
-      enabled: true
-    user:
-      name: user
-      password: password
   cloud:
     config:
       server:
@@ -20,5 +14,17 @@ spring:
           username: username
           password: password
           default-label: main
-encrypt:
-  key: #####
+
+  kafka:
+    bootstrap-servers:
+      - http://localhost:29092
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  level:
+    org.springframework.cloud: DEBUG
