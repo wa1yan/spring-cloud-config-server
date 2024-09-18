@@ -17,8 +17,8 @@ spring:
           force-pull: true
           skip-ssl-validation: true
           timeout: 10
-          username: wa1yan
-          password: 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
+          username: username
+          password: password
           default-label: main
 encrypt:
   key: secret
