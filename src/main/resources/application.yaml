@@ -21,4 +21,4 @@ spring:
           password: password
           default-label: main
 encrypt:
-  key: secret
+  key: #####
