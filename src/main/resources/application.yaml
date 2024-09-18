@@ -1,0 +1,24 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  security:
+    basic:
+      enabled: true
+    user:
+      name: user
+      password: password
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wa1yan/spring-cloud-config-data
+          force-pull: true
+          skip-ssl-validation: true
+          timeout: 10
+          username: wa1yan
+          password: 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
+          default-label: main
+encrypt:
+  key: secret
