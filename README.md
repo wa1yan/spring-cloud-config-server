@@ -5,7 +5,7 @@ Dependency
 
 Note: cloud-config-monitor dependency need to add on config server because we will use git-hub webhook to trigger change event on config server so configuration data will call monitor endpoint.
 ```
-<dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
