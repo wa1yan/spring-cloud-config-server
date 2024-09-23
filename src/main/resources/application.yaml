@@ -8,16 +8,27 @@ spring:
       server:
         git:
           uri: https://github.com/wa1yan/spring-cloud-config-data
+          default-label: main
+          search-paths: '{application}'
+          clone-on-start: true
           force-pull: true
           skip-ssl-validation: true
           timeout: 10
           username: username
           password: password
-          default-label: main
+          refresh-rate: 30
 
-  kafka:
-    bootstrap-servers:
-      - http://localhost:29092
+    bus:
+      enabled: true
+      env:
+        enabled: true
+    stream:
+      kafka:
+        binder:
+          brokers: http://localhost:29092
+#  kafka:
+#    bootstrap-servers:
+#      - http://localhost:29092
 
 management:
   endpoints:
@@ -27,4 +38,6 @@ management:
 
 logging:
   level:
-    org.springframework.cloud: DEBUG
+    org:
+      springframework:
+        cloud: DEBUG
